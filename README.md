@@ -1,7 +1,7 @@
 # CSGO-Text-To-Speech
 ~~#####Warning: Attempting to do this can cause BSOD, because you will be messing with sound drivers.~~
 #####NOTICE: This should not cause any problems with your computer. 
-AutoHotKey script to make TTS in CSGO. This software is provided as is and further updates might come sporadically.  A standalone version is in development.
+AutoHotKey script to make TTS in CSGO. This software is provided as is and further updates might come sporadically.  A standalone version is in development by axynos.
 
 ####Dependencies
 - CSGO or other voice capable source games(other games untested, but should work)
