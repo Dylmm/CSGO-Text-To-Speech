@@ -100,6 +100,16 @@ if LogFile = ""
 	MsgBox, Log file not specified. Please add in your logfile to the script variables section.
 	Exit
 }	
+
+If !WinExist("ahk_exe csgo.exe")
+	try
+	{
+	FileDelete, %LogFile%
+	FileAppend, , %LogFile%
+	}
+	catch error
+		msgbox % error.what ": " error.message "`nline: " error.line "`nsystem code: " a_lasterror
+
 ;-	Comment out the following line if you do not want to listen to the startup voice.
 TTS.Speak(StartupText)
 ; -------------------- STARTUP END ---------------------
@@ -204,7 +214,6 @@ SetOutputVoiceFormat(TTS, AudioOutputStreamFormatType, Voice, Volume, Output) {
 	{
 		if A_Index-1=Voice
 		{
-		;vVoices .= 
 		vVoices .= A_Index-1 ": " "->" TTS.GetVoices.Item(A_Index-1).GetDescription 
 		vVoices .= ". `n"
 		}
